@@ -112,7 +112,7 @@ public class Rooster {
 }
 
 Birds.java
-============
+==========
 public class Birds {
 	public static void main(String[] args) {
 		Duck d = new Duck();
@@ -126,3 +126,74 @@ public class Birds {
 }
 
 4.
+
+Parrot.java
+===========
+public interface Parrot {
+	void sound();
+}
+
+Animal.java
+===========
+public abstract class Animal implements Parrot {
+	@Override
+	public void sound() {
+		System.out.println("Woof, Woof");
+	}
+}
+
+Bird.java
+=========
+public abstract class Bird implements Parrot {
+	@Override
+	public void sound() {
+		System.out.println("Cock-a-doodle-doo");
+	}
+}
+
+Dog.java
+========
+public class Dog extends Animal {
+	public void sound() {
+		super.sound();
+	}
+}
+
+Cat.java
+========
+public class Cat extends Animal {
+	public void sound() {
+		System.out.println("Meow, Meow");
+	}
+}
+
+Rooster.java
+============
+public class Rooster extends Bird {
+	public void sound() {
+		super.sound();
+	}
+}
+
+Duck.java
+=========
+public class Duck extends Bird {
+	public void sound() {
+		System.out.println("Quack, Quack");
+	}
+}
+
+MainClass.java
+==============
+public class MainClass {
+	public static void main(String[] args) {
+		Parrot[] parrot = new Parrot[4];
+		parrot[0] = new Dog();
+		parrot[1] = new Cat();
+		parrot[2] = new Rooster();
+		parrot[3] = new Duck();
+		for (Parrot p : parrot) {
+			p.sound();
+		}
+	}
+}
