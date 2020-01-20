@@ -1,5 +1,7 @@
 # CodeTest
 
+A
+1.
 
 Animal.java
 ===========
@@ -15,6 +17,9 @@ public class Bird extends Animal {
 	void fly () {
 		System.out.println("FLYING");
 	}
+	void sing () {
+		System.out.println("SINGING");
+	}
 }
 
 Final.java
@@ -27,13 +32,11 @@ public class Final {
 	}
 }
 
-Explaination
-============ 
 1. We cannot implement Final.java class, Because the "sing()" method not defined in Bird.java & Animal.java
   The main method will run first "walk()" method extends in "Animal" class -> second "fly()" method extends in "Animal" class - > The "sing()" not defined anywhere. So JRE will throw an exception "Undefined type of method".
   
- 
- 
+============================================================================================================================ 
+
 2.
 
 Duck.java
@@ -71,6 +74,7 @@ public class Birds {
 	}
 }
 
+============================================================================================================================
 
 3.
 
@@ -124,6 +128,8 @@ public class Birds {
 		c.roostSound(); // rooster chicken sill
 	}
 }
+
+============================================================================================================================
 
 4.
 
@@ -197,3 +203,6 @@ public class MainClass {
 		}
 	}
 }
+============================================================================================================================
+
+5
